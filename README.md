@@ -40,32 +40,29 @@ MMM-Thesis-Analysis/
 │   └── FMCG_MMM_v2.xlsx             ← Jeu de données FMCG (hebdomadaire, 1248 obs.)
 │
 ├── chapitre_4_modelisation/         ← Analyse exploratoire + spécification MCO
-│   ├── sortie_01_resume_datasets.py
-│   ├── sortie_02_valeurs_manquantes.py
-│   ├── sortie_03_correspondance_variables.py
-│   ├── sortie_04_design_empirique.py
-│   ├── sortie_05_stats_descriptives.py
-│   ├── sortie_06_evolution_marketing.py
-│   ├── sortie_07_distribution_demande.py
-│   ├── sortie_08_specification_mco.py
-│   └── sortie_09_matrice_correlation.py
+│   ├── sortie_01_resume_datasets.py          ← Tableau 4.1 — Résumé des jeux de données
+│   ├── sortie_02_valeurs_manquantes.py       ← Tableau 4.2/4.3/4.4 — Valeurs manquantes
+│   ├── sortie_03_correspondance_variables.py ← Tableau 4.5 — Structure des variables
+│   ├── sortie_04_evolution_marketing.py      ← Figure 4.1 — Évolution marketing et demande
+│   ├── sortie_05_distribution_demande.py     ← Figure 4.2 — Distribution de la variabilité
+│   ├── sortie_06_profil_saisonnier.py        ← Figure 4.3 — Profil saisonnier
+│   ├── sortie_07_composition_marketing.py    ← Figure 4.4 — Composition des dépenses
+│   └── sortie_08_design_empirique.py         ← Figure 4.5 — Structure empirique du modèle MCO
 │
 ├── chapitre_5_application/          ← Résultats MCO + interprétation
-│   ├── sortie_10_profil_saisonnier.py
-│   ├── sortie_11_composition_marketing.py
-│   ├── sortie_12_statsmodels.py      ← Résultats MCO complets (statsmodels)
-│   ├── sortie_13_coefficients_marketing.py
-│   ├── sortie_14_observees_ajustees.py
-│   ├── sortie_15_impact_chocs.py
-│   └── sortie_16_comparaison_ec_fmcg.py
+│   ├── sortie_01_resultats_mco.py            ← Tableau 5.1/5.2 — Résultats MCO complets
+│   ├── sortie_02_matrice_correlation.py      ← Tableau 5.3/5.4 — Matrices de corrélation
+│   ├── sortie_03_coefficients_marketing.py   ← Figure 5.1 — Coefficients des variables marketing
+│   ├── sortie_04_observees_ajustees.py       ← Figure 5.2 — Valeurs observées vs ajustées
+│   ├── sortie_05_impact_chocs.py             ← Figure 5.3 — Impact des chocs exogènes
+│   └── sortie_06_comparaison_ec_fmcg.py      ← Tableau 5.5 — Comparaison E-Commerce vs FMCG
 │
 └── appendices/                      ← Analyses complémentaires
-    ├── appendice_a1.py              ← Demande par canal (E-Commerce)
-    ├── appendice_b1.py              ← Demande par région (FMCG)
-    ├── appendice_b2.py              ← Part de marché par région (FMCG)
-    ├── appendice_c_ec.py            ← Diagnostics des résidus MCO — E-Commerce
-    ├── appendice_c_fg.py            ← Diagnostics des résidus MCO — FMCG
-    └── appendice_d.py               ← Variantes supplémentaires des modèles
+    ├── appendice_01_residus_ec.py            ← Diagnostics des résidus MCO — E-Commerce
+    ├── appendice_02_residus_fg.py            ← Diagnostics des résidus MCO — FMCG
+    ├── appendice_03_variantes_modeles.py     ← Comparaison des variantes MCO
+    ├── appendice_04_demande_region.py        ← Demande par région (FMCG)
+    └── appendice_05_part_marche_region.py    ← Part de marché par région (FMCG)
 ```
 
 ---
@@ -75,8 +72,8 @@ MMM-Thesis-Analysis/
 | Indicateur | E-Commerce | FMCG |
 |---|---|---|
 | R² | 0.7679 | 0.8124 |
-| R² ajusté | 0.7647 | 0.8102 |
-| Statistique F | 238.659 | 362.311 |
+| R² ajusté | 0.7649 | 0.8102 |
+| Statistique F | 257.272 | 362.311 |
 | Durbin-Watson | 2.036 | 2.522 |
 | N observations | 1025 | 1186 |
 
@@ -115,16 +112,16 @@ Ou sous Google Colab (recommandé) : `statsmodels` est déjà installé.
 **Option 1 — Google Colab (recommandé)**
 
 1. Ouvrir [Google Colab](https://colab.research.google.com)
-2. Importer les deux fichiers Excel dans l'environnement Colab
+2. Importer les deux fichiers Excel depuis le dossier `données/`
 3. Copier-coller le code de chaque fichier `.py` dans une cellule
 4. Exécuter
 
 **Option 2 — Environnement local**
 
 ```bash
-git clone https://github.com/votre-username/MMM-Thesis-Analysis.git
+git clone https://github.com/bulasbozkurt-dev/MMM-Thesis-Analysis.git
 cd MMM-Thesis-Analysis
-pip install -r requirements.txt
+pip install pandas numpy matplotlib scipy statsmodels openpyxl
 python chapitre_4_modelisation/sortie_01_resume_datasets.py
 ```
 
