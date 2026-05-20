@@ -60,9 +60,9 @@ MMM-Thesis-Analysis/
 └── appendices/                      ← Analyses complémentaires
     ├── appendice_01_residus_ec.py            ← Diagnostics des résidus MCO — E-Commerce
     ├── appendice_02_residus_fg.py            ← Diagnostics des résidus MCO — FMCG
-    ├── appendice_03_variantes_modeles.py     ← Comparaison des variantes MCO
-    ├── appendice_04_demande_region.py        ← Demande par région (FMCG)
-    └── appendice_05_part_marche_region.py    ← Part de marché par région (FMCG)
+    ├── appendice_03_demande_region.py        ← Demande par région (FMCG)
+    ├── appendice_04_part_marche_region.py    ← Part de marché par région (FMCG)
+    └── appendice_05_variantes_modeles.py     ← Comparaison des variantes MCO
 ```
 
 ---
