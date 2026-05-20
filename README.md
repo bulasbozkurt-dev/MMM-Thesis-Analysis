@@ -57,10 +57,6 @@ MMM-Thesis-Analysis/
 │   ├── sortie_05_impact_chocs.py             ← Figure 5.3 — Impact des chocs exogènes
 │   └── sortie_06_comparaison_ec_fmcg.py      ← Tableau 5.5 — Comparaison E-Commerce vs FMCG
 │
-├── chapitre_7_evaluation/           ← Évaluation générale du projet
-│   ├── sortie_01_architecture_evaluation.py  ← Figure 7.1 — Architecture de l'évaluation
-│   └── sortie_02_matrice_contraintes.py      ← Figure 7.2 — Matrice qualitative des contraintes
-│
 └── appendices/                      ← Analyses complémentaires
     ├── appendice_01_residus_ec.py            ← Diagnostics des résidus MCO — E-Commerce
     ├── appendice_02_residus_fg.py            ← Diagnostics des résidus MCO — FMCG
@@ -123,7 +119,7 @@ Ou sous Google Colab (recommandé) : `statsmodels` est déjà installé.
 **Option 2 — Environnement local**
 
 ```bash
-git clone https://github.com/bulasbozkurg-dev/MMM-Thesis-Analysis.git
+git clone https://github.com/bulasbozkurt-dev/MMM-Thesis-Analysis.git
 cd MMM-Thesis-Analysis
 pip install pandas numpy matplotlib scipy statsmodels openpyxl
 python chapitre_4_modelisation/sortie_01_resume_datasets.py
